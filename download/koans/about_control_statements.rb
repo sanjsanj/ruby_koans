@@ -111,7 +111,7 @@ assert_equal :false_value, value
     assert_equal 2, result
   end
 
-  def test_next_statement
+def test_next_statement
     i = 0
     result = []
     while i < 10
@@ -119,7 +119,7 @@ assert_equal :false_value, value
       next if (i % 2) == 0
       result << i
     end
-    assert_equal __, result
+    assert_equal [1,3,5,7,9], result
   end
 
   def test_for_statement
@@ -128,7 +128,7 @@ assert_equal :false_value, value
     for item in array
       result << item.upcase
     end
-    assert_equal [__, __, __], result
+    assert_equal ["FISH", "AND", "CHIPS"], result
   end
 
   def test_times_statement
@@ -136,7 +136,7 @@ assert_equal :false_value, value
     10.times do
       sum += 1
     end
-    assert_equal __, sum
+    assert_equal 10, sum
   end
 
 end
